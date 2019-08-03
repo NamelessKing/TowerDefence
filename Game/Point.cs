@@ -15,16 +15,14 @@ namespace TowerDefence
             Y = y;
         }
 
-        public int DistanceToPoint(int x,int y)
-        {
-            int xDiff = X - x;
-            int yDiff = Y - y;
-            return (int)Math.Sqrt((xDiff*xDiff) + (yDiff * yDiff));
+        public int DistanceToPoint(int x, int y)
+        {   
+            return (int)Math.Sqrt(Math.Pow(X - x,2) + Math.Pow(Y - y, 2));
         }
 
         public int DistanceToPoint(Point point)
         {
-            return DistanceToPoint(point.X,point.Y);
+            return DistanceToPoint(point.X, point.Y);
         }
 
 

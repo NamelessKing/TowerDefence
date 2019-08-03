@@ -22,8 +22,9 @@ namespace TowerDefence
 
         public bool IsPointOnMap(Point point) {
            
-            return  point.Y >= 0 && point.Y < this.Height && 
-                    point.X >= 0 && point.Y < this.Width;
+            bool inBounds = point.Y >= 0 && point.Y < this.Height && 
+                            point.X >= 0 && point.Y < this.Width;
+            return inBounds;
         }
 
     }

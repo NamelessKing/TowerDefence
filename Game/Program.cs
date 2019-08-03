@@ -21,7 +21,7 @@ namespace TowerDefence
             {
                 Console.WriteLine("Unhandled TowerDefenceExceptions");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Unhandled Exception");
             }

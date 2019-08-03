@@ -11,7 +11,7 @@ namespace TowerDefence
             if (!map.IsPointOnMap(this))
             {
                 throw new OutOfBoundsException($"x = {x},y = {y} " +
-                    $"is outside the boundaries of the map");
+                    $"is outside the boundaries of this map");
             }
         }
     }
