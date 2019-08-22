@@ -35,7 +35,6 @@ namespace TowerDefence
                     if (IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(_power);
-                        Console.WriteLine("Shot at and hit an indaver!");
 
                         if (invader.IsNeutralized)
                         {

@@ -8,6 +8,12 @@ namespace TowerDefence
     {
         private readonly Path _path;
         private int _pathStep = 0;
+
+        public static int InvadeNumber { get; } = 0;
+
+
+        protected virtual int StepSize { get; } = 1;
+
         public MapLocation Location
         {
             get
@@ -36,16 +42,18 @@ namespace TowerDefence
         public Invader(Path path)
         {
             _path = path;
+            InvadeNumber++;
         }
 
         public void Move()
         {
-            _pathStep++;
+            _pathStep += StepSize;
         }
 
-        public void DecreaseHealth(int factor)
+        public virtual void DecreaseHealth(int factor)
         {
             Health -= factor;
+            Console.WriteLine("Shot at and hit an indaver!");
         }
 
     }
